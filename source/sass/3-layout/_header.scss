@@ -1,0 +1,306 @@
+header {
+    width: 100%;
+    height: 100vh;
+    background: url('../img/bg.jpg');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    position: relative;
+
+    nav {
+        position: fixed;
+        z-index: 10;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100vh;
+        display: none;
+        opacity: 0;
+        align-items: center;
+        background: rgba(0, 0, 0, .9);
+        animation: appearNav .5s linear both;
+
+        &.active {
+            display: flex;
+        }
+
+        ul {
+            width: 90%;
+            margin: 0 10%;
+            text-align: right;
+            list-style-type: none;
+            opacity: 0;
+            position: relative;
+            animation: appearNavList 1s .3s linear both;
+
+            li {
+                color: $white;
+                text-decoration: none;
+                margin: 20px;
+
+                a {
+                    padding: 0 30px;
+                    display: block;
+                    width: 100%;
+                    font-size: 50px;
+                    font-family: 'Open Sans', sans-serif;
+                    text-transform: uppercase;
+                    color: $white;
+                    transition: all .7s;
+
+                    &:hover {
+                        color: $white;
+                        background: $basicBlue;
+                    }
+
+                    @media only screen and (max-width: 680px) {
+                        font-size: 40px;
+                    }
+                }
+            }
+        }
+    }
+
+    .headerText {
+        height: 100vh;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        text-align: center;
+
+
+        h1 {
+            color: #fff;
+            letter-spacing: 3px;
+            margin: 50px 0;
+            text-shadow: 2px 2px 0 rgba(0, 0, 0, .5);
+            position: relative;
+
+            &:after {
+                content: ' ';
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 0;
+                height: 100%;
+                background: $gray;
+                animation: appearBlock 1.5s 1s cubic-bezier(.19, 1, .22, 1) forwards;
+            }
+
+            .headerText__animation {
+                opacity: 0;
+                animation: appearText .1s 1.5s linear forwards;
+            }
+
+            .headerText__span {
+                font-weight: 100;
+                font-family: 'Roboto', sans-serif;
+            }
+        }
+
+        h3 {
+            text-transform: uppercase;
+            color: #00aeef;
+            font-weight: 400;
+            font-family: 'Roboto', sans-serif;
+            letter-spacing: 2.5px;
+            text-shadow: 2px 2px 0 rgba(0, 0, 0, .5);
+            position: relative;
+
+            &:after {
+                content: ' ';
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 0;
+                height: 100%;
+                background: $basicBlue;
+                animation: appearBlock 1.5s 1.5s cubic-bezier(.19, 1, .22, 1) forwards;
+            }
+
+            .headerText2__animation {
+                opacity: 0;
+                animation: appearText .1s 2s linear forwards;
+            }
+
+            .headerText__span {
+                color: #fff;
+                font-weight: 300;
+            }
+        }
+    }
+
+    .mcroyal {
+        z-index: 11;
+        position: fixed;
+        top: 50px;
+        right: 50px;
+        width: 30px;
+        height: 20px;
+        transition: .2s;
+        animation: loadingMcRoyal .5s 1.5s ease-in both;
+        cursor: pointer;
+
+        &:hover {
+            box-shadow: 0px 0px 0px 15px $basicBlue;
+            background: $basicBlue;
+        }
+
+        &:hover>span {
+            animation: anime 2s infinite;
+        }
+
+        &.active {
+            transform: rotate(-90deg);
+
+            span:nth-child(1) {
+                top: calc(50% - 2px);
+                transform: rotate(45deg);
+            }
+
+            span:nth-child(2) {
+                opacity: 0;
+            }
+
+            span:nth-child(3) {
+                bottom: calc(50% - 2px);
+                transform: rotate(-45deg);
+            }
+        }
+
+        span {
+            position: absolute;
+            width: 100%;
+            height: 3px;
+            background: white;
+            left: 0;
+            border-radius: 10px;
+            transition: top .2s .2s, bottom .2s .2s, opacity .2s .2s, transform .2s .4s;
+
+            &:nth-child(1) {
+                top: 0;
+            }
+
+            &:nth-child(2) {
+                top: calc(50% - 2px);
+            }
+
+            &:nth-child(3) {
+                bottom: 0;
+            }
+        }
+    }
+
+    .headerArrow {
+        position: absolute;
+        bottom: 10%;
+        left: 50%;
+        transform: translateX(-50%);
+        animation: headerArrowBouncing 1s infinite both, loadingHeaderArrow .5s 1.7s ease-in both;
+
+        i {
+            color: $silver;
+            font-size: 40px;
+        }
+    }
+}
+
+@keyframes anime {
+    0% {
+        background: $white;
+    }
+
+    50% {
+        background: $black;
+    }
+
+    100% {
+        background: $white;
+    }
+}
+
+@keyframes appearBlock {
+    0% {
+        left: 0;
+        width: 0%;
+    }
+
+    50% {
+        left: 0;
+        width: 100%;
+    }
+
+    100% {
+        left: 100%;
+        width: 0;
+    }
+}
+
+@keyframes appearText {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+@keyframes appearNavList {
+    0% {
+        opacity: 0;
+        transform: translateX(-160px);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateX(0px);
+    }
+}
+
+@keyframes appearNav {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+@keyframes loadingMcRoyal {
+    0% {
+        opacity: 0;
+        top: -50px;
+    }
+
+    100% {
+        opacity: 1;
+        top: 50px;
+    }
+}
+
+@keyframes loadingHeaderArrow {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+@keyframes headerArrowBouncing {
+    0% {
+        bottom: 10%;
+    }
+
+    50% {
+        bottom: 9%;
+    }
+
+    100% {
+        bottom: 10%;
+    }
+}
