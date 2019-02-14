@@ -5,13 +5,22 @@
     <title>Paweł Turkot - Front-end developer | HTML5, CSS3, Javascript</title>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="shortcut icon" href="./favicon.ico" />
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr"
         crossorigin="anonymous">
     <link rel="stylesheet" href="assets/css/main.min.css" />
 </head>
 
 <body>
-    <header>
+
+    <div class="preloader">
+        <div class="preloader-container">
+            <div class="logo"></div>
+            <div class="logo-progress-bar"></div>
+        </div>
+    </div>
+
+    <header data-section="home">
         <div class="mcroyal">
             <span></span>
             <span></span>
@@ -19,11 +28,11 @@
         </div>
         <nav>
             <ul>
-                <li><a href="">Home</a></li>
-                <li><a href="">O mnie</a></li>
-                <li><a href="">Usługi</a></li>
-                <li><a href="">Projekty</a></li>
-                <li><a href="">Kontakt</a></li>
+                <li><a class="home" href="#">Home</a></li>
+                <li><a class="omnie" href="#">O mnie</a></li>
+                <li><a class="uslugi" href="#">Usługi</a></li>
+                <li><a class="projekty" href="#">Projekty</a></li>
+                <li><a class="kontakt" href="#">Kontakt</a></li>
             </ul>
         </nav>
         <div class="headerText">
@@ -39,9 +48,21 @@
             </h3>
         </div>
         <div class="headerArrow">
-            <i class="fas fa-angle-down"></i>
+            <svg viewBox="0 0 20 20" class="iconArrow">
+                <path d="M0 0 L10 10 L0 20"></path>
+            </svg>
         </div>
     </header>
+
+    <section data-section="omnie" class="quote">
+        <div class="container">
+            <div class="quoteText">
+                <i class="fas fa-quote-left"></i><span>The best way</span> to predict the future is to <span>create it</span>.<i
+                    class="fas fa-quote-right"></i>
+            </div>
+            <div class="quoteAuthor">- Peter Ducker</div>
+        </div>
+    </section>
 
 
 

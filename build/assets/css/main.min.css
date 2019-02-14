@@ -197,7 +197,7 @@ body {
   -webkit-tap-highlight-color: #00aeef; }
 
 .container {
-  width: 100%;
+  width: 90%;
   max-width: 1200px;
   margin: 0 auto;
   padding: 0 3 rem; }
@@ -285,6 +285,105 @@ hr {
   margin: 10px 0 30px;
   height: 0; }
 
+::-webkit-scrollbar {
+  width: 6px; }
+
+::-webkit-scrollbar-button {
+  background: #222; }
+
+::-webkit-scrollbar-thumb {
+  background: #333; }
+
+::-webkit-scrollbar-thumb:hover {
+  background: #00aeef; }
+
+::-webkit-scrollbar-track {
+  background: #000; }
+
+::-webkit-scrollbar-track-piece {
+  background: #000; }
+
+::-webkit-scrollbar-corner {
+  background: #999; }
+
+::-webkit-resizer {
+  background: #111; }
+
+@keyframes logo {
+  0% {
+    opacity: .2;
+    transform: translateY(-35px); }
+  100% {
+    opacity: 1;
+    transform: translateY(0px); } }
+
+@keyframes logo-progress-bar {
+  0% {
+    transform: translateY(-28px);
+    opacity: .2; }
+  100% {
+    transform: translateY(0px);
+    opacity: 1; } }
+
+@keyframes logo-progress-bar-loading {
+  0% {
+    width: 0%; }
+  100% {
+    width: 100%; } }
+
+@keyframes preloader {
+  0% {
+    transform: scale(1);
+    opacity: 1; }
+  100% {
+    transform: scale(0.7);
+    opacity: 0; } }
+
+.preloader {
+  display: none;
+  position: fixed;
+  z-index: 999;
+  width: 100%;
+  height: 100vh;
+  background: #1f1f1f; }
+  .preloader.visible {
+    display: block; }
+
+.preloader-container {
+  display: flex;
+  height: 100vh;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  animation: preloader 1s 2s ease-in-out both; }
+
+.logo {
+  width: 160px;
+  height: 100px;
+  background: url("../img/logo.png") no-repeat;
+  background-position: center;
+  animation: logo 2s both; }
+
+.logo-progress-bar {
+  position: relative;
+  height: 4px;
+  width: 150px;
+  margin-top: 30px;
+  background: #383838;
+  opacity: .1;
+  animation: logo-progress-bar 3s both; }
+
+.logo-progress-bar::after {
+  position: absolute;
+  content: ' ';
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background: #00aeef;
+  box-shadow: 0 0 3px #888888;
+  animation: logo-progress-bar-loading 1.2s .7s linear both; }
+
 header {
   width: 100%;
   height: 100vh;
@@ -355,10 +454,10 @@ header {
         width: 0;
         height: 100%;
         background: #fafafa;
-        animation: appearBlock 1.5s 1s cubic-bezier(0.19, 1, 0.22, 1) forwards; }
+        animation: appearBlock 1.5s 3.5s cubic-bezier(0.19, 1, 0.22, 1) forwards; }
       header .headerText h1 .headerText__animation {
         opacity: 0;
-        animation: appearText .1s 1.5s linear forwards; }
+        animation: appearText .1s 4s linear forwards; }
       header .headerText h1 .headerText__span {
         font-weight: 100;
         font-family: 'Roboto', sans-serif; }
@@ -378,10 +477,10 @@ header {
         width: 0;
         height: 100%;
         background: #00aeef;
-        animation: appearBlock 1.5s 1.5s cubic-bezier(0.19, 1, 0.22, 1) forwards; }
+        animation: appearBlock 1.5s 4s cubic-bezier(0.19, 1, 0.22, 1) forwards; }
       header .headerText h3 .headerText2__animation {
         opacity: 0;
-        animation: appearText .1s 2s linear forwards; }
+        animation: appearText .1s 4.5s linear forwards; }
       header .headerText h3 .headerText__span {
         color: #fff;
         font-weight: 300; }
@@ -393,7 +492,7 @@ header {
     width: 30px;
     height: 20px;
     transition: .2s;
-    animation: loadingMcRoyal .5s 1.5s ease-in both;
+    animation: loadingMcRoyal .5s 4s ease-in both;
     cursor: pointer; }
     header .mcroyal:hover {
       box-shadow: 0px 0px 0px 15px #00aeef;
@@ -429,10 +528,18 @@ header {
     bottom: 10%;
     left: 50%;
     transform: translateX(-50%);
-    animation: headerArrowBouncing 1s infinite both, loadingHeaderArrow .5s 1.7s ease-in both; }
-    header .headerArrow i {
-      color: #ddd;
-      font-size: 40px; }
+    animation: headerArrowBouncing 1s infinite both, loadingHeaderArrow .5s 4.2s ease-in both; }
+    header .headerArrow .iconArrow {
+      transform: rotate(90deg);
+      width: 30px;
+      cursor: pointer; }
+      header .headerArrow .iconArrow:hover > path {
+        stroke: #00aeef; }
+      header .headerArrow .iconArrow path {
+        stroke: #ddd;
+        stroke-width: 2px;
+        fill: none;
+        transition: .5s; }
 
 @keyframes anime {
   0% {
@@ -475,11 +582,9 @@ header {
 
 @keyframes loadingMcRoyal {
   0% {
-    opacity: 0;
-    top: -50px; }
+    opacity: 0; }
   100% {
-    opacity: 1;
-    top: 50px; } }
+    opacity: 1; } }
 
 @keyframes loadingHeaderArrow {
   0% {
@@ -494,3 +599,38 @@ header {
     bottom: 9%; }
   100% {
     bottom: 10%; } }
+
+.quote {
+  background: #1f1f1f;
+  font-family: 'Poppins', sans-serif;
+  font-size: 20px;
+  font-weight: 300;
+  padding: 14vh 0;
+  letter-spacing: .5px; }
+  .quote .container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column; }
+  .quote .quoteText {
+    color: #fff;
+    text-align: center;
+    position: relative; }
+    .quote .quoteText span {
+      font-weight: 700;
+      font-size: 22px; }
+    .quote .quoteText i {
+      font-size: 14px;
+      position: absolute;
+      opacity: .3; }
+      .quote .quoteText i.fa-quote-left {
+        transform: translate(-22px, 7px); }
+      .quote .quoteText i.fa-quote-right {
+        transform: translate(7px, 7px); }
+  .quote .quoteAuthor {
+    color: #fff;
+    font-size: 16px;
+    align-self: flex-end;
+    margin-right: 20%;
+    margin-top: 2%;
+    color: #484848; }

@@ -1,0 +1,49 @@
+.quote {
+    background: $softBlack;
+    font-family: 'Poppins', sans-serif;
+    font-size: 20px;
+    font-weight: 300;
+    padding: 14vh 0;
+    letter-spacing: .5px;
+
+    .container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+    }
+
+    .quoteText {
+        color: $white;
+        text-align: center;
+        position: relative;
+
+        span {
+            font-weight: 700;
+            font-size: 22px;
+        }
+
+        i {
+            font-size: 14px;
+            position: absolute;
+            opacity: .3;
+
+            &.fa-quote-left {
+                transform: translate(-22px, 7px);
+            }
+
+            &.fa-quote-right {
+                transform: translate(7px, 7px);
+            }
+        }
+    }
+
+    .quoteAuthor {
+        color: $white;
+        font-size: 16px;
+        align-self: flex-end;
+        margin-right: 20%;
+        margin-top: 2%;
+        color: #484848;
+    }
+}

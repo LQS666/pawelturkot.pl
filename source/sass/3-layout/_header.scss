@@ -85,12 +85,12 @@ header {
                 width: 0;
                 height: 100%;
                 background: $gray;
-                animation: appearBlock 1.5s 1s cubic-bezier(.19, 1, .22, 1) forwards;
+                animation: appearBlock 1.5s 3.5s cubic-bezier(.19, 1, .22, 1) forwards;
             }
 
             .headerText__animation {
                 opacity: 0;
-                animation: appearText .1s 1.5s linear forwards;
+                animation: appearText .1s 4s linear forwards;
             }
 
             .headerText__span {
@@ -116,12 +116,12 @@ header {
                 width: 0;
                 height: 100%;
                 background: $basicBlue;
-                animation: appearBlock 1.5s 1.5s cubic-bezier(.19, 1, .22, 1) forwards;
+                animation: appearBlock 1.5s 4s cubic-bezier(.19, 1, .22, 1) forwards;
             }
 
             .headerText2__animation {
                 opacity: 0;
-                animation: appearText .1s 2s linear forwards;
+                animation: appearText .1s 4.5s linear forwards;
             }
 
             .headerText__span {
@@ -139,7 +139,7 @@ header {
         width: 30px;
         height: 20px;
         transition: .2s;
-        animation: loadingMcRoyal .5s 1.5s ease-in both;
+        animation: loadingMcRoyal .5s 4s ease-in both;
         cursor: pointer;
 
         &:hover {
@@ -197,11 +197,23 @@ header {
         bottom: 10%;
         left: 50%;
         transform: translateX(-50%);
-        animation: headerArrowBouncing 1s infinite both, loadingHeaderArrow .5s 1.7s ease-in both;
+        animation: headerArrowBouncing 1s infinite both, loadingHeaderArrow .5s 4.2s ease-in both;
 
-        i {
-            color: $silver;
-            font-size: 40px;
+        .iconArrow {
+            transform: rotate(90deg);
+            width: 30px;
+            cursor: pointer;
+
+            &:hover>path {
+                stroke: $basicBlue;
+            }
+
+            path {
+                stroke: $silver;
+                stroke-width: 2px;
+                fill: none;
+                transition: .5s;
+            }
         }
     }
 }
@@ -272,12 +284,10 @@ header {
 @keyframes loadingMcRoyal {
     0% {
         opacity: 0;
-        top: -50px;
     }
 
     100% {
         opacity: 1;
-        top: 50px;
     }
 }
 
