@@ -177,6 +177,7 @@ header {
             left: 0;
             border-radius: 10px;
             transition: top .2s .2s, bottom .2s .2s, opacity .2s .2s, transform .2s .4s;
+            box-shadow: 0 0 3px 0 black;
 
             &:nth-child(1) {
                 top: 0;

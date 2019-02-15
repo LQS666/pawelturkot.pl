@@ -1,0 +1,133 @@
+.about {
+    padding: 8vh 0;
+    background: $gray;
+
+    h3 {
+        display: block;
+        color: $silver;
+        margin: 0 0 50px 7%;
+    }
+
+    h3.openTag {
+        position: relative;
+
+        &:before {
+            content: '<';
+        }
+
+        &:after {
+            content: '>';
+        }
+    }
+
+    h3.closeTag {
+        position: relative;
+
+        &:before {
+            content: '</';
+        }
+
+        &:after {
+            content: '>';
+        }
+    }
+
+    .aboutContainer {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+
+        &:hover>.aboutImg {
+            transform: translateY(-100px);
+        }
+
+        &:hover>.aboutImg img {
+            filter: grayscale(20%);
+        }
+
+        .aboutImg {
+            transform: translateY(-120px);
+            width: 300px;
+            height: 300px;
+            overflow: hidden;
+            border-radius: 50%;
+            position: relative;
+            border: 5px solid $gray;
+            transition: .5s;
+
+            img {
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 100%;
+                filter: grayscale(70%);
+                transition: .5s;
+            }
+        }
+
+        .aboutBox {
+            width: 80%;
+            min-height: 520px;
+            background: #272820;
+            display: block;
+            border-radius: 12px;
+            position: relative;
+
+            @media only screen and (max-width: 970px) {
+                min-height: 670px;
+            }
+
+            @media only screen and (max-width: 680px) {
+                min-height: 800px;
+            }
+
+            .aboutText {
+                position: absolute;
+                top: 80px;
+                padding: 0 40px;
+
+                p {
+                    color: white;
+
+                    .bigger {
+                        font-weight: 500;
+                    }
+
+                    .firstLine {
+                        font-size: 22px;
+                        font-weight: 500;
+                        color: $amazingBlue;
+                    }
+                }
+            }
+
+            span.windowControls {
+                position: absolute;
+                top: 24px;
+                width: 20px;
+                height: 20px;
+                border-radius: 50%;
+
+                &:nth-child(1) {
+                    left: 40px;
+                    background: #fa6255;
+                }
+
+                &:nth-child(2) {
+                    left: 80px;
+                    background: #f7be31;
+                }
+
+                &:nth-child(3) {
+                    left: 120px;
+                    background: #33c241;
+                }
+            }
+
+            @media only screen and (max-width: 680px) {
+                width: 95%;
+            }
+        }
+    }
+}
