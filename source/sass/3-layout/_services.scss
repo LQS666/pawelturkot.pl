@@ -1,0 +1,105 @@
+.services {
+    padding: 6vh 0;
+    background: $gray;
+
+    h3 {
+        display: block;
+        color: $silver;
+        margin: 0 0 0 2%;
+    }
+
+    h3.openTag {
+        position: relative;
+
+        &:before {
+            content: '<';
+        }
+
+        &:after {
+            content: '>';
+        }
+    }
+
+    h3.closeTag {
+        position: relative;
+
+        &:before {
+            content: '</';
+        }
+
+        &:after {
+            content: '>';
+        }
+    }
+
+    .servicesContainer {
+        margin: 0 4%;
+        list-style-type: none;
+        padding: 4vh 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+
+        .servicesItem {
+            width: 100%;
+            border-bottom: 2px solid #e6e6e6;
+            position: relative;
+            overflow: hidden;
+            transition: 0.2s linear;
+            padding: 42px 30px;
+            text-decoration: none;
+
+            @media only screen and (max-width: 680px) {
+                flex-direction: column;
+            }
+
+            .servicesText {
+
+                h4 {
+                    margin: 0 0 15px;
+                    color: #222;
+                    transition: 0.2s linear;
+                }
+
+                p {
+                    margin: 0;
+                    color: #222;
+                    text-indent: 1.5em;
+                }
+
+                i {
+                    position: absolute;
+                    display: block;
+                    font-size: 140px;
+                    top: 40px;
+                    left: 50px;
+                    opacity: .08;
+                    transition: 0.2s linear;
+                    margin: 0 30px;
+
+                    @media only screen and (max-width: 680px) {
+                        margin: 30px 0;
+                    }
+                }
+            }
+
+
+
+            &:hover {
+                background: $basicBlue;
+                box-shadow: 0 10px 15px 0 #e6e6e6;
+            }
+
+
+            &:hover>.servicesText h4,
+            &:hover>.servicesText p {
+                color: $white;
+            }
+
+            &:first-child {
+                border-top: 2px solid #e6e6e6;
+            }
+        }
+    }
+}

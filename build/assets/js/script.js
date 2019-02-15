@@ -54,4 +54,34 @@
             preloader.classList.remove('visible');
         }, 3000);
     });
+
+
+
+    // Slider
+
+    $('.slider').slick({
+        dots: false,
+        infinite: true,
+        autoplay: true,
+        autoplaySpeed: 1800,
+        slidesToShow: 6,
+        slidesToScroll: 2,
+        responsive: [{
+                breakpoint: 1020,
+                settings: {
+                    slidesToShow: 4,
+                    slidesToScroll: 2
+                }
+            },
+            {
+                breakpoint: 680,
+                settings: {
+                    slidesToShow: 2,
+                    slidesToScroll: 2
+                }
+            }
+        ]
+    });
+
+
 }());

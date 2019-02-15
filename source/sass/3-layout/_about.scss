@@ -1,11 +1,11 @@
 .about {
-    padding: 8vh 0;
-    background: $gray;
+    padding: 6vh 0 4vh 0;
+    background: $white;
 
     h3 {
         display: block;
         color: $silver;
-        margin: 0 0 50px 7%;
+        margin: 0 0 30px 7%;
     }
 
     h3.openTag {
@@ -43,11 +43,11 @@
         }
 
         &:hover>.aboutImg img {
-            filter: grayscale(20%);
+            filter: grayscale(0%);
         }
 
         .aboutImg {
-            transform: translateY(-120px);
+            transform: translateY(-115px);
             width: 300px;
             height: 300px;
             overflow: hidden;
@@ -56,12 +56,17 @@
             border: 5px solid $gray;
             transition: .5s;
 
+            @media only screen and (max-width: 680px) {
+                width: 200px;
+                height: 200px;
+            }
+
             img {
                 position: absolute;
                 top: 0;
                 left: 0;
                 width: 100%;
-                filter: grayscale(70%);
+                filter: grayscale(20%);
                 transition: .5s;
             }
         }
@@ -75,7 +80,7 @@
             position: relative;
 
             @media only screen and (max-width: 970px) {
-                min-height: 670px;
+                min-height: 620px;
             }
 
             @media only screen and (max-width: 680px) {
@@ -87,17 +92,21 @@
                 top: 80px;
                 padding: 0 40px;
 
+                @media only screen and (max-width: 680px) {
+                    padding: 0 20px;
+                }
+
                 p {
                     color: white;
 
                     .bigger {
-                        font-weight: 500;
+                        font-weight: 600;
                     }
 
                     .firstLine {
-                        font-size: 22px;
-                        font-weight: 500;
-                        color: $amazingBlue;
+                        font-size: 20px;
+                        font-weight: 600;
+                        color: $basicBlue;
                     }
                 }
             }
