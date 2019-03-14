@@ -8,6 +8,7 @@
     <link rel="shortcut icon" href="./favicon.ico" />
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr"
         crossorigin="anonymous">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <link rel="stylesheet" href="./assets/css/main.min.css" />
 </head>
 
@@ -66,7 +67,7 @@
                     <span class="windowControls"></span>
                     <span class="windowControls"></span>
                     <span class="windowControls"></span>
-                    <div class="aboutText">
+                    <div class="aboutText" data-aos="zoom-in">
                         <p>
                             <span class="firstLine">Hej! Czas poznać się trochę bliżej..</span>
                         </p>
@@ -102,11 +103,11 @@
 
     <section class="quote">
         <div class="container">
-            <div class="quoteText">
+            <div class="quoteText" data-aos="fade-up" data-aos-anchor-placement="center-bottom">
                 <i class="fas fa-quote-left"></i><span>The best way</span> to predict the future is to <span>create it</span>.<i
                     class="fas fa-quote-right"></i>
             </div>
-            <div class="quoteAuthor">- Peter Ducker</div>
+            <div class="quoteAuthor" data-aos="fade-up" data-aos-anchor-placement="center-bottom">- Peter Ducker</div>
         </div>
     </section>
 
@@ -115,7 +116,7 @@
         <div class="container">
             <h3 class="openTag">Umiejętności</h3>
             <ul class="servicesContainer">
-                <li class="servicesItem">
+                <li class="servicesItem" data-aos="zoom-in">
                     <div class="servicesText">
                         <i class="fas fa-code"></i>
                         <h4>WWW</h4>
@@ -136,7 +137,7 @@
                         </p>
                     </div>
                 </li>
-                <li class="servicesItem">
+                <li class="servicesItem" data-aos="zoom-in">
                     <div class="servicesText">
                         <i class="fas fa-pencil-alt"></i>
                         <h4>Projektowanie / UX / UI</h4>
@@ -151,7 +152,7 @@
                         </p>
                     </div>
                 </li>
-                <li class="servicesItem">
+                <li class="servicesItem" data-aos="zoom-in">
                     <div class="servicesText">
                         <i class="fas fa-graduation-cap"></i>
                         <h4>Wiedza Ogólna</h4>
@@ -217,14 +218,351 @@
 
     <section class="quote">
         <div class="container">
-            <div class="quoteText">
+            <div class="quoteText" data-aos="fade-up" data-aos-anchor-placement="center-bottom">
                 <i class="fas fa-quote-left"></i>If you can <span>dream it</span>, you can <span>do it</span>.<i class="fas fa-quote-right"></i>
             </div>
-            <div class="quoteAuthor">- Walt Disney</div>
+            <div class="quoteAuthor" data-aos="fade-up" data-aos-anchor-placement="center-bottom">- Walt Disney</div>
+        </div>
+    </section>
+
+    <section data-section="projekty" class="portfolio">
+        <div class="container">
+            <h3 class="openTag">Projekty</h3>
+            <div class="portfolioContainer">
+                <!-- <div class="btn-group">
+                    <button class="btn-project" data-filter="all">Wszystkie</button>
+                    <button class="btn-project" data-filter="www">WWW</button>
+                    <button class="btn-project" data-filter="gfx">Grafika</button>
+                    <button class="btn-project" data-filter="apps">Aplikacje</button>
+                </div> -->
+                <div class="portfolio-group">
+                    <div class="portfolio-item all www">
+                        <div data-aos="fade-right" class="portfolio-desc">
+                            <h5>WWW</h5>
+                            <h4>Barber Shop</h4>
+                            <p>
+                                Prosty landing page wykorzystujący HTML5 / CSS3 / Javascript i framework Materialize.
+                            </p>
+                            <ul>
+                                <li>HTML5</li>
+                                <li>CSS3</li>
+                                <li>Javascript</li>
+                                <li>MaterializeCSS</li>
+                                <li>Gulp</li>
+                            </ul>
+                            <a class="portfolio-link-arrow" href="">
+                                <svg viewBox="0 0 20 20" class="iconArrow">
+                                    <path d="M0 0 L10 10 L0 20"></path>
+                                </svg>
+                            </a>
+                        </div>
+                        <div data-aos="fade-zoom-in" data-aos-easing="ease-in-back" class="portfolio-picture">
+                            <img src="./assets/img/01.jpg" alt="">
+                        </div>
+                    </div>
+
+                    <div class="portfolio-item all www">
+                        <div data-aos="fade-right" class="portfolio-desc">
+                            <h5>WWW</h5>
+                            <h4>Kubuś Remontuje</h4>
+                            <p>
+                                Prosty landing page wykorzystujący HTML5 / CSS3 / Javascript.
+                            </p>
+                            <ul>
+                                <li>HTML5</li>
+                                <li>CSS3</li>
+                                <li>Javascript</li>
+                                <li>Gulp</li>
+                            </ul>
+                            <a class="portfolio-link-arrow" href="">
+                                <svg viewBox="0 0 20 20" class="iconArrow">
+                                    <path d="M0 0 L10 10 L0 20"></path>
+                                </svg>
+                            </a>
+                        </div>
+                        <div data-aos="fade-zoom-in" data-aos-easing="ease-in-back" class="portfolio-picture">
+                            <img src="./assets/img/02.jpg" alt="">
+                        </div>
+                    </div>
+
+                    <div class="portfolio-item all www">
+                        <div data-aos="fade-right" class="portfolio-desc">
+                            <h5>WWW</h5>
+                            <h4>Detailing Car Studio</h4>
+                            <p>
+                                Prosty landing page wykorzystujący HTML5 / CSS3 / Javascript.
+                            </p>
+                            <ul>
+                                <li>HTML5</li>
+                                <li>CSS3</li>
+                                <li>Javascript</li>
+                                <li>Gulp</li>
+                            </ul>
+                            <a class="portfolio-link-arrow" href="">
+                                <svg viewBox="0 0 20 20" class="iconArrow">
+                                    <path d="M0 0 L10 10 L0 20"></path>
+                                </svg>
+                            </a>
+                        </div>
+                        <div data-aos="fade-zoom-in" data-aos-easing="ease-in-back" class="portfolio-picture">
+                            <img src="./assets/img/03.jpg" alt="">
+                        </div>
+                    </div>
+
+                    <div class="portfolio-item all www">
+                        <div data-aos="fade-right" class="portfolio-desc">
+                            <h5>WWW</h5>
+                            <h4>Portfolio dla fotografa</h4>
+                            <p>
+                                Minimalistyczny projekt portfolio z galerią i ciekawym efektem przejść pomiędzy
+                                stronami.
+                            </p>
+                            <ul>
+                                <li>HTML5</li>
+                                <li>CSS3</li>
+                                <li>Javascript</li>
+                            </ul>
+                            <a class="portfolio-link-arrow" href="">
+                                <svg viewBox="0 0 20 20" class="iconArrow">
+                                    <path d="M0 0 L10 10 L0 20"></path>
+                                </svg>
+                            </a>
+                        </div>
+                        <div data-aos="fade-zoom-in" data-aos-easing="ease-in-back" class="portfolio-picture">
+                            <img src="./assets/img/04.jpg" alt="">
+                        </div>
+                    </div>
+
+                    <div class="portfolio-item all www">
+                        <div data-aos="fade-right" class="portfolio-desc">
+                            <h5>WWW</h5>
+                            <h4>Gra 'Kamień papier nożyczki'</h4>
+                            <p>
+                                Prosta klasyczna gra. Zasady dobrze każdemu znane.
+                            </p>
+                            <ul>
+                                <li>HTML5</li>
+                                <li>CSS3</li>
+                                <li>Javascript</li>
+                            </ul>
+                            <a class="portfolio-link-arrow" href="">
+                                <svg viewBox="0 0 20 20" class="iconArrow">
+                                    <path d="M0 0 L10 10 L0 20"></path>
+                                </svg>
+                            </a>
+                        </div>
+                        <div data-aos="fade-zoom-in" data-aos-easing="ease-in-back" class="portfolio-picture">
+                            <img src="./assets/img/06.jpg" alt="">
+                        </div>
+                    </div>
+
+                    <div class="portfolio-item all www">
+                        <div data-aos="fade-right" class="portfolio-desc">
+                            <h5>WWW</h5>
+                            <h4>Lista TODO</h4>
+                            <p>
+                                Lista rzeczy do zrobienia. Połączona z bazą danych Firebase. Możliwość dodawania i
+                                usuwania zadań.
+                            </p>
+                            <ul>
+                                <li>HTML5</li>
+                                <li>CSS3</li>
+                                <li>Javascript</li>
+                                <li>Firebase</li>
+                            </ul>
+                            <a class="portfolio-link-arrow" href="">
+                                <svg viewBox="0 0 20 20" class="iconArrow">
+                                    <path d="M0 0 L10 10 L0 20"></path>
+                                </svg>
+                            </a>
+                        </div>
+                        <div data-aos="fade-zoom-in" data-aos-easing="ease-in-back" class="portfolio-picture">
+                            <img src="./assets/img/07.jpg" alt="">
+                        </div>
+                    </div>
+
+                    <div class="portfolio-item all www">
+                        <div data-aos="fade-right" class="portfolio-desc">
+                            <h5>WWW</h5>
+                            <h4>Aplikacja pogody</h4>
+                            <p>
+                                Szybka i przejrzysta aplikacja pogody pobierająca dane z zewnętrznego API. Z
+                                ciekawszych
+                                funkcji możliwe jest sprawdzenie
+                                ciśnienia, siły wiatru, a także wschodu i zachodu słońca.
+                            </p>
+                            <p>
+                                <span style="color: red; font-weight: 700">
+                                    Aktualnie brak responsywnej wersji pod urządzenia mobilne.</span>
+                            </p>
+                            <ul>
+                                <li>HTML5</li>
+                                <li>CSS3</li>
+                                <li>Javascript</li>
+                                <li>ReactJS</li>
+                            </ul>
+                            <a class="portfolio-link-arrow" href="">
+                                <svg viewBox="0 0 20 20" class="iconArrow">
+                                    <path d="M0 0 L10 10 L0 20"></path>
+                                </svg>
+                            </a>
+                        </div>
+                        <div data-aos="fade-zoom-in" data-aos-easing="ease-in-back" class="portfolio-picture">
+                            <img src="./assets/img/09.jpg" alt="">
+                        </div>
+                    </div>
+
+                    <div class="portfolio-item all www">
+                        <div data-aos="fade-right" class="portfolio-desc">
+                            <h5>WWW</h5>
+                            <h4>Mini blog</h4>
+                            <p>
+                                Strona przypominająca tradycyjnego bloga. Oparta na GatsbyJS i połączona z GraphCMS.
+                                Strony programatyczne generowane są automatycznie na podstawie wpisów z bazy danych
+                                CMS.
+                            </p>
+                            <ul>
+                                <li>HTML5</li>
+                                <li>CSS3</li>
+                                <li>Javascript</li>
+                                <li>ReactJS</li>
+                                <li>GatsbyJS</li>
+                                <li>GraphQL</li>
+                                <li>GraphCMS</li>
+                            </ul>
+                            <a class="portfolio-link-arrow" href="">
+                                <svg viewBox="0 0 20 20" class="iconArrow">
+                                    <path d="M0 0 L10 10 L0 20"></path>
+                                </svg>
+                            </a>
+                        </div>
+                        <div data-aos="fade-zoom-in" data-aos-easing="ease-in-back" class="portfolio-picture">
+                            <img src="./assets/img/08.jpg" alt="">
+                        </div>
+                    </div>
+
+                    <div class="portfolio-item all gfx">
+                        <div data-aos="fade-right" class="portfolio-desc">
+                            <h5>Grafika</h5>
+                            <h4>Serwis wulkanizacyjny</h4>
+                            <p>
+                                Baner dla profesjonalnej firmy zajmującej się wulkanizacją.
+                            </p>
+                            <ul>
+                                <li>Photoshop</li>
+                                <li>Illustrator</li>
+                            </ul>
+                            <a class="portfolio-link-arrow" href="">
+                                <svg viewBox="0 0 20 20" class="iconArrow">
+                                    <path d="M0 0 L10 10 L0 20"></path>
+                                </svg>
+                            </a>
+                        </div>
+                        <div data-aos="fade-zoom-in" data-aos-easing="ease-in-back" class="portfolio-picture">
+                            <img src="./assets/img/12.jpg" alt="">
+                        </div>
+                    </div>
+
+                    <div class="portfolio-item all gfx">
+                        <div data-aos="fade-right" class="portfolio-desc">
+                            <h5>Grafika</h5>
+                            <h4>Plansza do gry</h4>
+                            <p>
+                                Projekt i realizacja planszy do gry o tematyce przedsiębiorczości.
+                            </p>
+                            <ul>
+                                <li>Photoshop</li>
+                                <li>Illustrator</li>
+                            </ul>
+                            <a class="portfolio-link-arrow" href="">
+                                <svg viewBox="0 0 20 20" class="iconArrow">
+                                    <path d="M0 0 L10 10 L0 20"></path>
+                                </svg>
+                            </a>
+                        </div>
+                        <div data-aos="fade-zoom-in" data-aos-easing="ease-in-back" class="portfolio-picture">
+                            <img src="./assets/img/11.jpg" alt="">
+                        </div>
+                    </div>
+
+                    <div class="portfolio-item all gfx">
+                        <div data-aos="fade-right" class="portfolio-desc">
+                            <h5>Grafika</h5>
+                            <h4>Remonty wykończenia</h4>
+                            <p>
+                                Baner dla profesjonalnej firmy wykończeniowej.
+                            </p>
+                            <ul>
+                                <li>Photoshop</li>
+                                <li>Illustrator</li>
+                            </ul>
+                            <a class="portfolio-link-arrow" href="">
+                                <svg viewBox="0 0 20 20" class="iconArrow">
+                                    <path d="M0 0 L10 10 L0 20"></path>
+                                </svg>
+                            </a>
+                        </div>
+                        <div data-aos="fade-zoom-in" data-aos-easing="ease-in-back" class="portfolio-picture">
+                            <img src="./assets/img/15.jpg" alt="">
+                        </div>
+                    </div>
+
+                    <div class="portfolio-item all gfx">
+                        <div data-aos="fade-right" class="portfolio-desc">
+                            <h5>Grafika</h5>
+                            <h4>Logo</h4>
+                            <p>
+                                Identyfikacja wizualna dla amatorskiej drużyny esportowej. Motyw patriotyczny.
+                            </p>
+                            <ul>
+                                <li>Photoshop</li>
+                                <li>Illustrator</li>
+                            </ul>
+                            <a class="portfolio-link-arrow" href="">
+                                <svg viewBox="0 0 20 20" class="iconArrow">
+                                    <path d="M0 0 L10 10 L0 20"></path>
+                                </svg>
+                            </a>
+                        </div>
+                        <div data-aos="fade-zoom-in" data-aos-easing="ease-in-back" class="portfolio-picture">
+                            <img src="./assets/img/13.jpg" alt="">
+                        </div>
+                    </div>
+
+                    <div class="portfolio-item all gfx">
+                        <div data-aos="fade-right" class="portfolio-desc">
+                            <h5>Aplikacja</h5>
+                            <h4>System zarządzania studentami</h4>
+                            <p>
+                                Projekt zaliczeniowy na studia. Aplikacja dla systemów Microsoft Windows.
+                                Funkcjonalności: logowanie, dodawanie / usuwanie /
+                                edycja
+                                studentów, zarządzanie przedmiotami i ocenami.
+                            </p>
+                            <ul>
+                                <li>Photoshop</li>
+                                <li>C#</li>
+                                <li>MySQL</li>
+                            </ul>
+                            <a class="portfolio-link-arrow" href="">
+                                <svg viewBox="0 0 20 20" class="iconArrow">
+                                    <path d="M0 0 L10 10 L0 20"></path>
+                                </svg>
+                            </a>
+                        </div>
+                        <div data-aos="fade-zoom-in" data-aos-easing="ease-in-back" class="portfolio-picture">
+                            <img src="./assets/img/10.jpg" alt="">
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+            <h3 class="closeTag">Projekty</h3>
         </div>
     </section>
 
     <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script src="./assets/js/slick.min.js" type="text/javascript" charset="utf-8"></script>
     <script src="./assets/js/script.js"></script>
 

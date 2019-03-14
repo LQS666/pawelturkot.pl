@@ -84,4 +84,44 @@
     });
 
 
+    // Animacje 
+
+    AOS.init({
+        duration: 2e3
+    });
+
+
+    const header = document.querySelector('header'),
+        text = document.querySelector('.headerText'),
+        arrow = document.querySelector('.iconArrow'),
+        omnie = document.querySelector('.about'),
+        omnieOffsetTop = omnie.offsetTop,
+        headerOffsetHeight = header.offsetHeight;
+
+    document.addEventListener('scroll', function () {
+        const scrollVal = window.scrollY;
+
+        if (scrollVal < omnieOffsetTop) {
+            arrow.style.opacity = 1 - (2 * scrollVal / headerOffsetHeight);
+            text.style.opacity = 1 - (scrollVal / headerOffsetHeight);
+            text.style.transform = `translateY(${scrollVal / 3}px)`;
+        }
+    })
+
+
+
+
+    // Filtr Portfolio
+
+    $(document).ready(function () {
+        $(".btn-project").click(function () {
+            var filterValue = $(this).attr('data-filter');
+            if (filterValue == "all") {
+                $(".all").show("slow");
+            } else {
+                $(".all").not('.' + filterValue).hide("slow");
+                $(".all").filter('.' + filterValue).show("slow");
+            }
+        });
+    });
 }());
