@@ -59,7 +59,7 @@
 
 
 
-    <section data-section="omnie" class="about">
+    <section data-section="omnie" class="about" id="about">
         <div class="container">
             <h3 class="openTag">O mnie</h3>
             <div class="aboutContainer">
@@ -112,7 +112,7 @@
     </section>
 
 
-    <section data-section="uslugi" class="services">
+    <section data-section="uslugi" class="services" id="services">
         <div class="container">
             <h3 class="openTag">Umiejętności</h3>
             <ul class="servicesContainer">
@@ -225,7 +225,7 @@
         </div>
     </section>
 
-    <section data-section="projekty" class="portfolio">
+    <section data-section="projekty" class="portfolio" id="portfolio">
         <div class="container">
             <h3 class="openTag">Projekty</h3>
             <div class="portfolioContainer">
@@ -560,6 +560,53 @@
             <h3 class="closeTag">Projekty</h3>
         </div>
     </section>
+
+
+    <section data-section="kontakt" class="contact" id="contact">
+        <div class="container">
+            <h3 class="openTag">Kontakt</h3>
+            <div class="contact-container">
+                <div data-aos="fade-right" class="wrapper">
+                    <form method="POST" action="mail.php" autoComplete="off">
+                        <div class="formItem">
+                            <input class="input" type="text" name="name" placeholder=" " id="name" maxLength="30"
+                                required>
+                            <label class="label" for="name">Twoje imie</label>
+                            <div class="formItemBar"></div>
+                        </div>
+                        <div class="formItem">
+                            <input class="input" type="email" name="email" placeholder=" " id="email" required>
+                            <label class="label" for="email">Twój email</label>
+                            <div class="formItemBar"></div>
+                        </div>
+                        <div class="formItem">
+                            <input class="input" type="text" name="subject" placeholder=" " id="subject" required>
+                            <label class="label" for="subject">Temat</label>
+                            <div class="formItemBar"></div>
+                        </div>
+                        <div class="formItem">
+                            <textarea class="textarea" name="message" class="textarea" placeholder=" " id="message"
+                                required></textarea>
+                            <label class="label" for="message">Twoja wiadomość</label>
+                            <div class="formItemBar"></div>
+                        </div>
+                        <button type="submit" class="button">
+                            Wyślij <i class="fa fa-paper-plane"></i>
+                        </button>
+                    </form>
+                    <div id="form-messages"></div>
+                </div>
+
+                <div data-aos="fade-up" data-aos-duration="3000" class="contact-info wrapper">
+                    <p>Stwórzmy razem coś wspaniałego!</p>
+                    <h2>Wypełnij formularz, a wkrótce skontaktuję się z Tobą!</h2>
+                </div>
+
+            </div>
+            <h3 class="closeTag">Kontakt</h3>
+        </div>
+    </section>
+
 
     <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
