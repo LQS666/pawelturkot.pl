@@ -1,6 +1,6 @@
 @charset "UTF-8";
 /*! normalize.css v3.0.2 | MIT License | git.io/normalize * */
-@import url("https://fonts.googleapis.com/css?family=Poppins:300,400,600,700|Montserrat:300,400,600");
+@import url("https://fonts.googleapis.com/css?family=Poppins:300,400,600,700|Montserrat:300,400,600,700");
 html {
   font-family: sans-serif;
   -ms-text-size-adjust: 100%;
@@ -292,13 +292,13 @@ hr {
   height: 0; }
 
 ::-webkit-scrollbar {
-  width: 6px; }
+  width: 7px; }
 
 ::-webkit-scrollbar-button {
   background: #222; }
 
 ::-webkit-scrollbar-thumb {
-  background: #333; }
+  background: #00C6FF; }
 
 ::-webkit-scrollbar-thumb:hover {
   background: #00C6FF; }
@@ -719,8 +719,8 @@ header {
           .about .aboutContainer .aboutBox .aboutText p .bigger {
             font-weight: 600; }
           .about .aboutContainer .aboutBox .aboutText p .firstLine {
-            font-size: 20px;
-            font-weight: 600;
+            font-size: 26px;
+            font-weight: 400;
             color: #00C6FF; }
       .about .aboutContainer .aboutBox span.windowControls {
         position: absolute;
@@ -800,11 +800,11 @@ header {
           .services .servicesContainer .servicesItem .servicesText i {
             margin: 30px 0; } }
       .services .servicesContainer .servicesItem:hover {
-        background: #00C6FF;
+        background: #ecf0f1;
         box-shadow: 0 10px 15px 0 #e6e6e6; }
       .services .servicesContainer .servicesItem:hover > .servicesText h4,
       .services .servicesContainer .servicesItem:hover > .servicesText p {
-        color: #fff; }
+        color: black; }
       .services .servicesContainer .servicesItem:first-child {
         border-top: 2px solid #e6e6e6; }
 
@@ -1103,6 +1103,114 @@ body {
   .go-back:hover {
     color: #fff;
     background: #0fbcf9; }
+
+footer {
+  background: #111; }
+
+footer .footer-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  height: 40vh; }
+  footer .footer-wrapper ul {
+    display: flex;
+    justify-content: space-between;
+    list-style-type: none;
+    font-size: 2em;
+    width: 30%;
+    text-align: center; }
+    @media (max-width: 1000px) {
+      footer .footer-wrapper ul {
+        width: 50%; } }
+    @media (max-width: 600px) {
+      footer .footer-wrapper ul {
+        width: 100%; } }
+    footer .footer-wrapper ul li {
+      margin: 20px;
+      color: #fff; }
+      footer .footer-wrapper ul li a {
+        color: #ddd;
+        text-decoration: none;
+        transition: all .5s ease-in-out; }
+        footer .footer-wrapper ul li a i {
+          width: 100%;
+          height: 100%; }
+  footer .footer-wrapper p:nth-of-type(1) {
+    color: #fff;
+    font-size: 15px;
+    margin-top: 50px; }
+    footer .footer-wrapper p:nth-of-type(1) span {
+      color: red;
+      font-size: 20px; }
+  footer .footer-wrapper p {
+    color: #bdc3c7;
+    margin-top: 10px;
+    font-size: 13px; }
+
+[title="Facebook"]:hover {
+  color: #3b5998; }
+
+[title="GitHub"]:hover {
+  color: #723184; }
+
+[title="CodePen"]:hover {
+  color: #d1d1d1; }
+
+[title="LinkedIn"]:hover {
+  color: #0077b5; }
+
+[title="Email"]:hover {
+  color: #e6b60a; }
+
+a[data-tooltip][data-position="bottom"]:before {
+  top: 100%;
+  left: -130%;
+  margin-top: 10px; }
+
+a[data-tooltip][data-position="bottom"]:after {
+  border-bottom-color: #000;
+  border-top: none;
+  top: 100%;
+  left: 5px;
+  margin-top: 4px; }
+
+a[data-tooltip].bottom:before, a[data-tooltip].bottom:after {
+  transform: translateY(-10px); }
+
+a[data-tooltip].bottom:hover:after, a[data-tooltip].bottom:hover:before {
+  transform: translateY(0px); }
+
+a[data-tooltip] {
+  position: relative; }
+  a[data-tooltip]:after, a[data-tooltip]:before {
+    position: absolute;
+    visibility: hidden;
+    opacity: 0;
+    transition: transform 200ms ease, opacity 200ms;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+    z-index: 99; }
+  a[data-tooltip]:before {
+    content: attr(data-tooltip);
+    background: #000;
+    color: #fff;
+    font-size: 10px;
+    font-weight: bold;
+    padding: 10px 15px;
+    border-radius: 5px;
+    white-space: nowrap;
+    text-decoration: none;
+    text-transform: uppercase;
+    letter-spacing: 1px; }
+  a[data-tooltip]:after {
+    width: 0;
+    height: 0;
+    border: 6px solid transparent;
+    content: ''; }
+  a[data-tooltip]:hover:after, a[data-tooltip]:hover:before {
+    visibility: visible;
+    opacity: 0.85;
+    transform: translateY(0px); }
 
 /* Slider */
 .slick-slider {

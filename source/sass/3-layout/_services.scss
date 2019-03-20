@@ -87,14 +87,14 @@
 
 
             &:hover {
-                background: $basicBlue;
+                background: #ecf0f1;
                 box-shadow: 0 10px 15px 0 #e6e6e6;
             }
 
 
             &:hover>.servicesText h4,
             &:hover>.servicesText p {
-                color: $white;
+                color: black;
             }
 
             &:first-child {
