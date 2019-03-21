@@ -3,7 +3,7 @@ $name = $_POST['name'];
 $mailFrom = $_POST['email'];
 $message = $_POST['message'];
 
-$mailTo = "p.turkot123@gmail.com";
+$mailTo = "kontakt@pawelturkot.pl";
 
 $subject = "Wiadomość ze strony pawelturkot.pl";
 $mailheader = "From: $mailFrom \r\n";

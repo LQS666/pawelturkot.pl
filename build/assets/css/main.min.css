@@ -805,7 +805,13 @@ header {
         text-indent: 1.5em; }
         @media only screen and (max-width: 680px) {
           .services .servicesContainer .servicesItem .servicesText p {
-            font-size: 13px; } }
+            font-size: 13px;
+            text-align: justify;
+            -webkit-hyphens: auto;
+            -moz-hyphens: auto;
+            -ms-hyphens: auto;
+            hyphens: auto;
+            word-wrap: break-word; } }
       .services .servicesContainer .servicesItem .servicesText i {
         position: absolute;
         display: block;
