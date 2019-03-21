@@ -73,7 +73,7 @@
 
         .aboutBox {
             width: 80%;
-            min-height: 520px;
+            min-height: 500px;
             background: #272820;
             display: block;
             border-radius: 12px;
@@ -84,7 +84,7 @@
             }
 
             @media only screen and (max-width: 680px) {
-                min-height: 800px;
+                min-height: 700px;
             }
 
             .aboutText {
@@ -107,6 +107,10 @@
                         font-size: 26px;
                         font-weight: 400;
                         color: $basicBlue;
+                    }
+
+                    @media only screen and (max-width: 680px) {
+                        font-size: 14px;
                     }
                 }
             }

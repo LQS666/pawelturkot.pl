@@ -97,6 +97,10 @@ header {
                 font-weight: 100;
                 font-family: 'Roboto', sans-serif;
             }
+
+            @media only screen and (max-width: 680px) {
+                font-size: 40px;
+            }
         }
 
         h3 {
@@ -127,6 +131,10 @@ header {
             .headerText__span {
                 color: #fff;
                 font-weight: 300;
+            }
+
+            @media only screen and (max-width: 680px) {
+                font-size: 18px;
             }
         }
     }

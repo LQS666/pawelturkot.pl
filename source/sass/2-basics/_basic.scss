@@ -8,6 +8,11 @@
   outline: none;
 }
 
+html,
+body {
+  overflow-x: hidden;
+}
+
 body {
   font-size: 14px;
   line-height: 1.6;
@@ -21,7 +26,6 @@ body {
   width: 100%;
   max-width: 1400px;
   margin: 0 auto;
-  padding: 0 3 rem;
 }
 
 a {
